@@ -32,7 +32,7 @@ function ToDoList(){
             placeholder="Add your task"
             value={newTask}
             onChange={handleInputChange} />
-            <button className="add-btn btn btn-info rounded-pill px-3" onClick={addTask}>
+            <button className="add-btn btn btn-success" onClick={addTask}>
                 Add
             </button>
 
@@ -40,9 +40,9 @@ function ToDoList(){
             {tasks.map((task, index) =>
             <li kay={index}>
                 <span className="task-text">{task}</span>
-                <button className="deleteBtn btn btn-danger rounded-pill px-3" onClick={() => deleteTask(index)}>Delete</button>
-                <button className="moveBtn" onClick={() => moveTaskUp(index)}>Up</button>
-                <button className="moveBtn" onClick={() => moveTaskDown(index)}>Down</button>
+                <button className="delete-btn btn btn-danger" onClick={() => deleteTask(index)}>Delete</button>
+                <button className="move-btn btn btn-primary" onClick={() => moveTaskUp(index)}>Up</button>
+                <button className="move-btn btn btn-primary" onClick={() => moveTaskDown(index)}>Down</button>
            
             </li>)}
 

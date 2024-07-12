@@ -10,7 +10,10 @@ function ToDoList(){
         setNewTask(event.target.value);
     }
     function addTask(){
-
+        if(newTask.trim() !== ""){
+        setTasks(t => [...t, newTask]);
+        setNewTask("");
+        }
     }
     function deleteTask(index){
 
